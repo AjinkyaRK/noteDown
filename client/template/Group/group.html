@@ -11,35 +11,34 @@
 	<br>
 	{{#if group}}
 		<div class="row">
-			{{#if owner}}
-				<button class="btn btn-success pull-right glyphicon glyphicon-pencil" id="edit" style="margin-right: 5px;" title="Edit"></button>
-				<button class="btn btn-danger pull-right glyphicon glyphicon-remove" id="delete" style="margin-right: 5px;" title="Delete"></button>	
-			{{else}}
-				{{#if member}}
-					<input type="submit" class="btn btn-danger pull-right" id="leave" value="Leave" style="margin-right: 20px;">
+				<div class="jumbotron">
+				<div class="thumbnail">
+				{{#if owner}}
+					<button class="btn btn-success pull-right glyphicon glyphicon-pencil" id="edit" style="margin-right: 5px;" title="Edit"></button>
+					<button class="btn btn-danger pull-right glyphicon glyphicon-remove" id="delete" style="margin-right: 5px;" title="Delete"></button>	
 				{{else}}
-					{{#if private}}
-						<input type="submit" class="btn btn-success pull-right" id="join" value="Accept" style="margin-right:20px;">
+					{{#if member}}
+						<input type="submit" class="btn btn-danger pull-right" id="leave" value="Leave" style="margin-right: 20px;">
 					{{else}}
-						<input type="submit" class="btn btn-success pull-right" id="join" value="Join" style="margin-right:20px;">
+						{{#if private}}
+							<input type="submit" class="btn btn-success pull-right" id="join" value="Accept" style="margin-right:20px;">
+						{{else}}
+							<input type="submit" class="btn btn-success pull-right" id="join" value="Join" style="margin-right:20px;">
+						{{/if}}
 					{{/if}}
 				{{/if}}
-			{{/if}}
-			
-		</div>
-
-		<div class="row">
-			<div class="container-fluid">
-				<hr class="divider">
-				<h2 id="gname" style="margin-left:20px;" title="{{group.gname}}"><b><i>{{group.gname}}</i></b></h2> 
-				<span style="float: right; font-size: 14px;" id="privacy"><i>{{group.privacy}}-group...</i></span>
-				<hr class="divider">
-				<h3 id="gdesc" style="margin-left: 20px; font-size: 16px;" title="{{group.gdesc}}">{{group.gdesc}}</h3>
-				<hr class="divider">
-				<h3 id="gdesc" style="margin-left: 20px; font-size: 16px;" title="{{group.gdesc}}">{{group.createdOn}}</h3>
-				<hr class="divider">
-			</div>		
-		</div>
+				<p>
+					<h2 id="gname" style="margin-left:20px;" title="{{group.gname}}"><b><i>{{group.gname}}</i></b></h2> 
+					<span style="float: right; font-size: 14px;" id="privacy"><i>{{group.privacy}}-group...</i></span>
+					<hr class="divider">
+					<h3 id="gdesc" style="margin-left: 20px; font-size: 16px;" title="{{group.gdesc}}">{{group.gdesc}}</h3>
+					<hr class="divider">
+					<h3 id="gdesc" style="margin-left: 20px; font-size: 16px;" title="{{group.gdesc}}">{{group.createdOn}}</h3>
+					<hr class="divider">
+				</p>
+				</div>	
+				</div>
+			</div>	
 
 		{{#if owner}}
 		<br>

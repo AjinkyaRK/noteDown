@@ -51,6 +51,6 @@ dangrossman:bootstrap-daterangepicker
 ground:db
 email
 yong:meteor-videojs
-summernote:summernote
 #aramix:social-share
 mrt:toastjs
+summernote:summernote
