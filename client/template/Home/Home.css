@@ -1,7 +1,15 @@
-/*Home CSS*/
+/*Home CSS
 div#body{
 	margin-top:72px;
 	width:100%;
 	background-color: #F2F2F2;
+}*/
+
+div#about-sec {
+	background-color: #3498db;
+}
+
+div#features-sec {
+	background-color: #e74c3c;
 }
 	
